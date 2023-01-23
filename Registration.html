@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<form method="post" action="WelcomePage.php">
+		<h2>Registration Form</h2>
+
+		<input type="text" name="name" placeholder="Name"><br><br>
+		<input type="text" name="email" placeholder="Email"><br><br>
+		<input type="text" name="mobile" placeholder="Mobile"><br><br>
+
+		Gender<br>
+		<input type="radio" name="gender" value="Male">Male<br>
+		<input type="radio" name="gender" value="Female">Female<br><br>
+
+		Hobbies<br>
+		<input type="checkbox" name="hobby[]" value="Dancing">Dancing<br>
+		<input type="checkbox" name="hobby[]" value="Painting">Painting<br>
+		<input type="checkbox" name="hobby[]" value="Coding">Coding<br><br>
+
+		<input type="submit" name="submit" value="Register">
+	</form>
+</body>
+</html>

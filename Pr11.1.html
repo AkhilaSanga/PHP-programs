@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Registration</title>
+</head>
+<body>
+	<form method="post" action="FormControls.php">
+		<h2>Student Registration Form</h2>
+
+		Name: <input type="text" name="name" placeholder="Name"><br><br>
+		Email: <input type="text" name="email" placeholder="Email"><br><br>
+		Mobile No.: <input type="text" name="mobile" placeholder="Mobile"><br><br>
+
+		Gender<br>
+		<select name="gender" size="3">
+		<option value="select" selected>select</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+		</select><br><br>
+
+		Year<br>
+		<select name="year" size="2">
+		<option value="1st Year (2nd Sem)" selected>1st Year (2nd Sem)</option>
+		<option value="2nd Year (2nd Sem)">2nd Year (2nd Sem)</option>
+		<option value="3rd Year (2nd Sem)">3rd Year (2nd Sem)</option>
+		</select><br><br>
+
+		Engineering Courses<br>
+		<select name="select">
+		<option value="Computer Engineering" selected>Computer Engineering</option>
+		<option value="Information Engineering">Information Engineering</option>
+		<option value="Mechanical Engineering">Mechanical Engineering</option>
+		<option value="Electrical Engineering">Electrical Engineering</option>
+		<option value="Civil Engineering">Civil Engineering</option>
+		<option value="Electronic and Telecommmunication Engineering">Electronic and Telecommmunication Engineering</option>
+		</select><br><br>
+		
+		Subjects<br>
+		<select name="subject[]" multiple="multiple" multiple size="6">
+			<option value="C++" selected>C++</option>
+			<option value="BEC">BEC</option>
+			<option value="EEC">EEC</option>
+			<option value="M2">M2</option>
+			<option value="Java">Java</option>
+			<option value="DSU">DSU</option>
+			<option value="CNE">CNE</option>
+			<option value="DMA">DMA</option>
+			<option value="PHP">PHP</option>
+			<option value="Android">Android</option>
+			<option value="Management">Management</option>
+			<option value="WMN">WMN</option>
+			<option value="ETI">ETI</option>
+		</select><br><br>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	
+</body>
+</html>

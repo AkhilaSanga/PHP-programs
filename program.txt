@@ -1,0 +1,68 @@
+Image wih Text
+
+<?php
+header("Content-type:image/png");
+$handle=ImageCreate(130,50);
+$bg_color=ImageColorAllocate($handle,240,240,140);
+$txt_color=ImageColorAllocate($handle,0,0,0);
+ImageString($handle,5,5,18,"MSBTE.org.in",$txt_color);
+imagepng($handle);
+?>
+
+Displaying image in HTML pages:
+
+<html>
+<head>
+<title>
+Embedding created images in HTML pages
+</title>
+</head>
+<body>
+<h2>  Embedding created images in HTML pages </h2>
+This is a blank image created on the server:
+<br>
+<img src="img2.php">
+</body>
+</html>
+
+Scaling Images:
+
+Example1:
+
+<?php
+$src=ImageCreateFromJPEG('php.jpg');
+$width=ImageSx($src);
+$height=ImageSy($src);
+$x=$width/2;
+$y=$height/2;
+$dst=ImageCreateTrueColor($x,$y);
+ImageCopyResampled($dst,$src,0,0,0,0,$x,$y,$width,$height);
+header('Content-Type:image/png');
+ImagePNG($dst);
+?>
+
+Example2:
+
+<?php
+$src=ImageCreateFromJPEG('php.jpg');
+$width=ImageSx($src);
+$height=ImageSy($src);
+$x=$width/2;
+$y=$height/2;
+$dst=ImageCreateTrueColor($x,$y);
+Imagecopyresized($dst,$src,0,0,0,0,$x,$y,$width,$height);
+header('Content-Type:image/png');
+ImagePNG($dst);
+?>
+
+
+Creation of PDF Document:
+
+<?php
+require('fpdf.php');
+$pdf=new FPDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial','B',16);
+$pdf->Cell(60,10,'Hello PHP World!',1,1,'C');
+$pdf->Output();
+?>
